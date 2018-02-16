@@ -21,7 +21,7 @@ require 'scraperwiki/simple_html_dom.php';
 			$yeartext	=	$year->find("a",0)->plaintext;
 			if($yearlink)
 			{
-				echo "Scraper Inprogress don't stop";
+				
 				$pagelink		=	 'https://indiankanoon.org'.$yearlink;
 				$openyearpage	=	  file_get_html($pagelink);
 				if($openyearpage)
@@ -49,7 +49,7 @@ require 'scraperwiki/simple_html_dom.php';
 					
 					if (!$checkerprofile) 
 								{
-									echo "$pagetext...\n";
+									echo "Scraper Inprogress don't stop - > $pagetext\n";
 									$RecordFlag =   false;
 									break;
 								}			
