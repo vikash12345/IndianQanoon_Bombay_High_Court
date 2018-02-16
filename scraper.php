@@ -12,7 +12,7 @@ require 'scraperwiki/simple_html_dom.php';
 	
 	if($page)
 	{	
-		echo "Scraper Inprogress don't stop";
+		
 		$link	=	'https://indiankanoon.org/'.$page;
 		$pageofyears	=	file_get_html($link);
 		foreach($pageofyears->find("/html/body/div[2]/table/tbody/tr/td/div[@class='browselist']")as $year)
@@ -21,6 +21,7 @@ require 'scraperwiki/simple_html_dom.php';
 			$yeartext	=	$year->find("a",0)->plaintext;
 			if($yearlink)
 			{
+				echo "Scraper Inprogress don't stop";
 				$pagelink		=	 'https://indiankanoon.org'.$yearlink;
 				$openyearpage	=	  file_get_html($pagelink);
 				if($openyearpage)
